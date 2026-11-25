@@ -1,0 +1,51 @@
+<!--meta {"title":"Missions","description":"Robotic explorers and crewed spacecraft: Artemis, Dragonfly, NEO Surveyor, the Roman Space Telescope and research concepts.","scripts":[]} -->
+<section class="hero hero-simple">
+  <div class="container">
+    <p class="eyebrow">Mission control</p>
+    <h1>Humanity <span class="grad">Outward</span></h1>
+    <p class="lead">Robotic explorers and crewed spacecraft turn distant questions into measurable science.</p>
+  </div>
+</section>
+
+<section class="container section">
+  <div class="section-head"><h2>Selected missions</h2></div>
+  <div class="toolbar" data-toolbar="#mission-grid">
+    <div class="chips" role="group" aria-label="Filter missions">
+      <button class="chip is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+      <button class="chip" type="button" data-filter="crewed" aria-pressed="false">Crewed</button>
+      <button class="chip" type="button" data-filter="robotic" aria-pressed="false">Robotic</button>
+      <button class="chip" type="button" data-filter="telescope" aria-pressed="false">Telescopes</button>
+      <button class="chip" type="button" data-filter="concept" aria-pressed="false">Concepts</button>
+    </div>
+    <label class="search"><span class="sr-only">Search missions</span><input type="search" placeholder="Search missions…" data-search-input autocomplete="off"></label>
+  </div>
+  <p class="result-count" data-count-out aria-live="polite"></p>
+  <div class="grid" id="mission-grid">
+    <article class="card" data-item data-cat="crewed" data-search="Artemis III 2027 Moon lander test Earth orbit" data-id="mission-artemis-3" data-title="NASA Artemis III" data-page="/missions">
+      <div class="art art-moon"></div>
+      <div class="card-body"><span class="badge badge-warm">Target: 2027</span><h3>NASA Artemis III</h3><p>NASA currently describes Artemis III as a crewed low-Earth-orbit demonstration to test rendezvous and docking with commercial lunar lander systems before a planned 2028 landing mission.</p><a class="more" href="https://www.nasa.gov/artemis-iii-news-and-updates/" target="_blank" rel="noopener noreferrer">NASA mission updates ↗</a></div>
+    </article>
+    <article class="card" data-item data-cat="crewed" data-search="Artemis IV 2028 Moon landing lunar south pole" data-id="mission-artemis-4" data-title="NASA Artemis IV" data-page="/missions">
+      <div class="art art-moon"></div>
+      <div class="card-body"><span class="badge badge-warm">Target: early 2028</span><h3>NASA Artemis IV</h3><p>NASA is targeting Artemis IV for the first crewed lunar landing in this updated sequence, with the aim of exploring near the lunar South Pole.</p><a class="more" href="https://www.nasa.gov/artemis-ii-news-and-updates/" target="_blank" rel="noopener noreferrer">NASA Artemis program ↗</a></div>
+    </article>
+    <article class="card" data-item data-cat="robotic" data-search="Dragonfly Titan rotorcraft launch 2028" data-id="mission-dragonfly" data-title="Dragonfly" data-page="/missions">
+      <div class="art art-titan"></div>
+      <div class="card-body"><span class="badge badge-warm">Target: 2028 launch</span><h3>Dragonfly</h3><p>A rotorcraft lander designed to fly between sites on Saturn's moon Titan and study its chemistry and prebiotic environment.</p><a class="more" href="https://science.nasa.gov/mission/dragonfly/" target="_blank" rel="noopener noreferrer">NASA Dragonfly ↗</a></div>
+    </article>
+    <article class="card" data-item data-cat="telescope robotic" data-search="NEO Surveyor asteroid comet planetary defense 2027" data-id="mission-neo-surveyor" data-title="NEO Surveyor" data-page="/missions">
+      <div class="art art-scope"></div>
+      <div class="card-body"><span class="badge badge-warm">Target: 2027</span><h3>NEO Surveyor</h3><p>An infrared space telescope designed to find and characterize near-Earth asteroids and comets that could pose hazards.</p><a class="more" href="https://science.nasa.gov/mission/neo-surveyor/" target="_blank" rel="noopener noreferrer">NASA NEO Surveyor ↗</a></div>
+    </article>
+    <article class="card" data-item data-cat="telescope" data-search="Nancy Grace Roman Space Telescope dark energy exoplanets" data-id="mission-roman" data-title="Roman Space Telescope" data-page="/missions">
+      <div class="art art-scope"></div>
+      <div class="card-body"><span class="badge badge-green">Launched: 2026</span><h3>Roman Space Telescope</h3><p>NASA's wide-field observatory is designed to investigate dark energy, dark matter, and exoplanets. Its mission operations and science releases will develop over time.</p><a class="more" href="https://science.nasa.gov/mission/roman-space-telescope/" target="_blank" rel="noopener noreferrer">NASA Roman ↗</a></div>
+    </article>
+    <article class="card" data-item data-cat="concept" data-search="Breakthrough Starshot laser sail Alpha Centauri concept" data-id="mission-starshot" data-title="Breakthrough Starshot" data-page="/missions">
+      <div class="art art-sail"></div>
+      <div class="card-body"><span class="badge badge-violet">Research concept</span><h3>Breakthrough Starshot</h3><p>A proposed research initiative exploring whether tiny light-sail probes could one day travel toward the Alpha Centauri system. It is not an operational mission.</p><a class="more" href="https://breakthroughinitiatives.org/initiative/3" target="_blank" rel="noopener noreferrer">Project overview ↗</a></div>
+    </article>
+  </div>
+  <p class="empty" data-empty hidden>No missions match your search.</p>
+  <div class="callout reveal"><b>Schedule note:</b> Dates are planning targets, not guarantees. Mission schedules can change after engineering reviews, funding decisions, or technical delays.</div>
+</section>

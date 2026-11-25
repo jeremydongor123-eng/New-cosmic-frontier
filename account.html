@@ -1,0 +1,85 @@
+<!--meta {"title":"Account","description":"Log in or create a Cosmic Frontier account to save missions and research items.","scripts":["account"]} -->
+<section class="container section">
+  <div class="account-wrap">
+
+    <div id="auth-view">
+      <div class="panel">
+        <p class="eyebrow">Cosmic Frontier account</p>
+        <h2>Welcome aboard</h2>
+        <p class="small">Save missions and research items to your account.</p>
+        <div class="tabs" role="tablist" aria-label="Account action">
+          <button class="tab" type="button" role="tab" data-mode="login" aria-selected="true">Log in</button>
+          <button class="tab" type="button" role="tab" data-mode="register" aria-selected="false">Create account</button>
+        </div>
+        <form id="auth-form" novalidate>
+          <div class="field" data-register-only hidden>
+            <label for="name">Name</label>
+            <input id="name" type="text" autocomplete="name" maxlength="60" placeholder="Ada Lovelace">
+          </div>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input id="email" type="email" autocomplete="username" maxlength="254" required placeholder="you@example.com">
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <div class="pw-row">
+              <input id="password" type="password" autocomplete="current-password" maxlength="128" required placeholder="At least 12 characters">
+              <button class="pw-toggle" type="button" data-target="password" aria-pressed="false">Show</button>
+            </div>
+            <div data-register-only hidden>
+              <div class="meter" aria-hidden="true"><i id="meter"></i></div>
+              <p class="hint" id="meter-label">At least 12 characters. A few unrelated words works well.</p>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block" id="auth-submit" type="submit">Log in</button>
+          <p class="form-msg" id="auth-msg" role="alert"></p>
+        </form>
+      </div>
+      <div class="callout">
+        <h3>How your account is protected</h3>
+        <p>Passwords are hashed with scrypt and never stored in plain text. Sessions use random tokens in HttpOnly, SameSite cookies, requests are CSRF-protected, and login attempts are rate-limited. Use a unique password; a password manager is recommended.</p>
+      </div>
+    </div>
+
+    <div id="dash-view" hidden>
+      <div class="panel">
+        <p class="eyebrow">Your account</p>
+        <h2 id="hello">Welcome</h2>
+        <p class="profile-line" id="profile-line"></p>
+        <p><button class="btn btn-ghost btn-sm" id="logout" type="button">Log out</button></p>
+      </div>
+
+      <div class="panel">
+        <h3>Saved items</h3>
+        <p class="small" id="saved-empty">Nothing saved yet. Use the bookmark button on any mission, topic or research item.</p>
+        <ul class="saved" id="saved-list"></ul>
+      </div>
+
+      <div class="panel">
+        <h3>Change password</h3>
+        <form id="pw-form" novalidate>
+          <div class="field"><label for="current-password">Current password</label><input id="current-password" type="password" autocomplete="current-password" maxlength="128" required></div>
+          <div class="field">
+            <label for="new-password">New password</label>
+            <div class="pw-row"><input id="new-password" type="password" autocomplete="new-password" maxlength="128" required><button class="pw-toggle" type="button" data-target="new-password" aria-pressed="false">Show</button></div>
+            <div class="meter" aria-hidden="true"><i id="meter2"></i></div>
+            <p class="hint" id="meter2-label">At least 12 characters. A few unrelated words works well.</p>
+          </div>
+          <button class="btn btn-primary" type="submit">Update password</button>
+          <p class="form-msg" id="pw-msg" role="alert"></p>
+        </form>
+      </div>
+
+      <div class="panel danger-zone">
+        <h3>Delete account</h3>
+        <p class="small">Permanently removes your account and saved items.</p>
+        <form id="delete-form" novalidate>
+          <div class="field"><label for="delete-password">Confirm with your password</label><input id="delete-password" type="password" autocomplete="current-password" maxlength="128" required></div>
+          <button class="btn btn-danger" type="submit">Delete my account</button>
+          <p class="form-msg" id="delete-msg" role="alert"></p>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</section>

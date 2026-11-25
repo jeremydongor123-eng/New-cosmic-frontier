@@ -1,0 +1,65 @@
+<!--meta {"title":"Discover Space","description":"Explore planets, galaxies, black holes, nebulae, exoplanets and neutron stars.","scripts":["discover"]} -->
+<section class="hero hero-simple">
+  <div class="container">
+    <p class="eyebrow">Cosmic catalogue</p>
+    <h1>Discover <span class="grad">Space</span></h1>
+    <p class="lead">Explore the major structures and phenomena that shape the observable universe.</p>
+  </div>
+</section>
+
+<section class="container section">
+  <div class="section-head"><h2>Explore the universe</h2></div>
+  <div class="toolbar" data-toolbar="#discover-grid">
+    <div class="chips" role="group" aria-label="Filter by category">
+      <button class="chip is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+      <button class="chip" type="button" data-filter="worlds" aria-pressed="false">Worlds</button>
+      <button class="chip" type="button" data-filter="structures" aria-pressed="false">Structures</button>
+      <button class="chip" type="button" data-filter="extreme" aria-pressed="false">Extreme objects</button>
+    </div>
+    <label class="search"><span class="sr-only">Search topics</span><input type="search" placeholder="Search: stars, galaxies, pulsars…" data-search-input autocomplete="off"></label>
+  </div>
+  <p class="result-count" data-count-out aria-live="polite"></p>
+  <div class="grid" id="discover-grid">
+    <article class="card" data-item data-cat="worlds" data-search="planets solar system terrestrial gas giant" data-id="topic-planets" data-title="Planets" data-page="/discover">
+      <div class="art art-planet"></div>
+      <div class="card-body"><h3>Planets</h3><p>Worlds orbiting stars. Our solar system has eight recognized planets, from rocky Mercury to ice giant Neptune.</p><p class="keyfact"><b>Key fact:</b> Jupiter's mass is more than twice that of all the other planets combined.</p></div>
+    </article>
+    <article class="card" data-item data-cat="structures" data-search="galaxies milky way stars gas dust dark matter" data-id="topic-galaxies" data-title="Galaxies" data-page="/discover">
+      <div class="art art-galaxy"></div>
+      <div class="card-body"><h3>Galaxies</h3><p>Vast gravitational systems containing stars, gas, dust, stellar remnants, and dark matter.</p><p class="keyfact"><b>Key fact:</b> The Milky Way is a barred spiral galaxy; our Sun lies in one of its spiral arms.</p></div>
+    </article>
+    <article class="card" data-item data-cat="extreme" data-search="black holes event horizon gravity" data-id="topic-black-holes" data-title="Black Holes" data-page="/discover">
+      <div class="art art-bh"></div>
+      <div class="card-body"><h3>Black Holes</h3><p>Regions whose event horizons mark the boundary beyond which escape is impossible.</p><p class="keyfact"><b>Key fact:</b> The first image of a black hole's shadow (M87*) was released in 2019 by the Event Horizon Telescope.</p></div>
+    </article>
+    <article class="card" data-item data-cat="structures" data-search="nebula star formation gas dust" data-id="topic-nebulae" data-title="Nebulae" data-page="/discover">
+      <div class="art art-nebula"></div>
+      <div class="card-body"><h3>Nebulae</h3><p>Interstellar clouds of gas and dust. Some are stellar nurseries; others are remnants of dying stars.</p><p class="keyfact"><b>Key fact:</b> The Orion Nebula is visible to the naked eye as the fuzzy middle "star" of Orion's sword.</p></div>
+    </article>
+    <article class="card" data-item data-cat="worlds" data-search="exoplanets worlds beyond solar system transit" data-id="topic-exoplanets" data-title="Exoplanets" data-page="/discover">
+      <div class="art art-exo"></div>
+      <div class="card-body"><h3>Exoplanets</h3><p>Planets beyond our solar system, detected using methods such as transits and radial velocity.</p><p class="keyfact"><b>Key fact:</b> The first exoplanet found around a Sun-like star, 51 Pegasi b, was announced in 1995.</p></div>
+    </article>
+    <article class="card" data-item data-cat="extreme" data-search="neutron stars pulsars supernova" data-id="topic-neutron-stars" data-title="Neutron Stars" data-page="/discover">
+      <div class="art art-pulsar"></div>
+      <div class="card-body"><h3>Neutron Stars</h3><p>Ultra-dense stellar remnants. Some rotate rapidly and emit beams observed as pulsars.</p><p class="keyfact"><b>Key fact:</b> A teaspoon of neutron-star material would weigh billions of tonnes.</p></div>
+    </article>
+  </div>
+  <p class="empty" data-empty hidden>No topics match your search. Try a different word or choose "All".</p>
+</section>
+
+<section class="container section">
+  <div class="section-head reveal">
+    <p class="eyebrow">Perspective</p>
+    <h2>How far is far?</h2>
+    <p>How long light takes to reach different places, on a logarithmic scale. Each step is far more than the last.</p>
+  </div>
+  <ul class="lt reveal" id="lt">
+    <li class="lt-row" data-seconds="1.28"><span class="lt-name">The Moon</span><span class="lt-bar"><i></i></span><span class="lt-time">about 1.3 seconds</span></li>
+    <li class="lt-row" data-seconds="499"><span class="lt-name">The Sun</span><span class="lt-bar"><i></i></span><span class="lt-time">about 8.3 minutes</span></li>
+    <li class="lt-row" data-seconds="15000"><span class="lt-name">Neptune</span><span class="lt-bar"><i></i></span><span class="lt-time">about 4 hours</span></li>
+    <li class="lt-row" data-seconds="133800000"><span class="lt-name">Proxima Centauri</span><span class="lt-bar"><i></i></span><span class="lt-time">4.24 years</span></li>
+    <li class="lt-row" data-seconds="820000000000"><span class="lt-name">Galactic centre</span><span class="lt-bar"><i></i></span><span class="lt-time">about 26,000 years</span></li>
+    <li class="lt-row" data-seconds="79000000000000"><span class="lt-name">Andromeda galaxy</span><span class="lt-bar"><i></i></span><span class="lt-time">about 2.5 million years</span></li>
+  </ul>
+</section>

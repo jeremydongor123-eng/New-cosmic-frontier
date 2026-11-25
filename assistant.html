@@ -1,0 +1,40 @@
+<!--meta {"title":"Assistant & Help","description":"Ask basic astronomy questions, get help navigating Cosmic Frontier, and find reliable places to keep learning.","scripts":["assistant"]} -->
+<section class="hero hero-simple">
+  <div class="container">
+    <p class="eyebrow">Learning support</p>
+    <h1>Cosmic <span class="grad">Assistant</span></h1>
+    <p class="lead">Ask basic astronomy questions, get help navigating the site, and find reliable places to continue learning.</p>
+  </div>
+</section>
+
+<section class="container section">
+  <div class="section-head">
+    <h2>Ask a question</h2>
+    <p>This prototype is an offline question assistant with prepared astronomy explanations. It is not connected to a live AI model and does not send your questions anywhere.</p>
+  </div>
+  <div class="chatbox">
+    <div id="chatlog" class="chatlog" role="log" aria-live="polite" aria-label="Conversation">
+      <div class="message">Welcome! Ask me about stars, black holes, galaxies, exoplanets, light-years, or missions.</div>
+    </div>
+    <div class="chips suggest" aria-label="Suggested questions">
+      <button class="chip" type="button" data-ask="What is a black hole?">What is a black hole?</button>
+      <button class="chip" type="button" data-ask="What is a light-year?">What is a light-year?</button>
+      <button class="chip" type="button" data-ask="How are exoplanets found?">How are exoplanets found?</button>
+      <button class="chip" type="button" data-ask="Tell me about Artemis">Tell me about Artemis</button>
+    </div>
+    <form id="chat-form" class="chat-form" autocomplete="off">
+      <label class="sr-only" for="question">Your question</label>
+      <input id="question" maxlength="300" placeholder="Ask about the universe…" required>
+      <button class="btn btn-primary" type="submit">Send</button>
+    </form>
+  </div>
+</section>
+
+<section class="container section">
+  <div class="section-head"><h2>Help centre</h2></div>
+  <div class="grid">
+    <article class="card reveal"><div class="card-body"><h3>Finding topics</h3><p>Use the filter chips and search box above the cards on each page. Use the top navigation to switch sections.</p></div></article>
+    <article class="card reveal"><div class="card-body"><h3>Account help</h3><p>Create a free account to save missions and research items. Passwords are hashed on the server and sessions use secure cookies.</p><a class="more" href="/account">Account page →</a></div></article>
+    <article class="card reveal"><div class="card-body"><h3>Checking facts</h3><p>Research updates link to official agency or observatory releases. Always check the original source and publication date.</p><a class="more" href="/news">Research news →</a></div></article>
+  </div>
+</section>

@@ -1,0 +1,67 @@
+<!--meta {"title":"Stars","description":"How stars form, shine, evolve and end their lives, with an interactive life-cycle explorer and a star temperature widget.","scripts":["stars"]} -->
+<section class="hero hero-simple">
+  <div class="container">
+    <p class="eyebrow">Stellar evolution</p>
+    <h1>The Life of a <span class="grad">Star</span></h1>
+    <p class="lead">Every star is a long-running balance between gravity and the energy released by nuclear fusion.</p>
+  </div>
+</section>
+
+<section class="container section">
+  <div class="section-head">
+    <h2>How stars work</h2>
+    <p>Stars form when dense regions of molecular clouds collapse under gravity. As the core heats and compresses, hydrogen fusion can begin. The star then spends much of its life on the main sequence.</p>
+  </div>
+  <div class="lifecycle reveal">
+    <div class="chips" role="group" aria-label="Choose a star type">
+      <button class="chip is-active" type="button" data-path="sun" aria-pressed="true">Sun-like star</button>
+      <button class="chip" type="button" data-path="massive" aria-pressed="false">Massive star</button>
+    </div>
+    <ol class="stages" id="stages" role="tablist" aria-label="Life stages"></ol>
+    <article class="stage-detail" aria-live="polite">
+      <div class="orb" id="stage-orb"></div>
+      <div><span class="badge" id="stage-badge">Stage 3 of 6</span><h3 id="stage-title">Main sequence</h3><p id="stage-text">Hydrogen fusion in the core supplies energy that counteracts gravitational collapse.</p><p class="small" id="stage-time"></p></div>
+    </article>
+  </div>
+</section>
+
+<section class="container section">
+  <div class="section-head"><h2>Stages at a glance</h2></div>
+  <div class="toolbar" data-toolbar="#stage-grid">
+    <div class="chips"><button class="chip is-active" type="button" data-filter="all" aria-pressed="true">All</button></div>
+    <label class="search"><span class="sr-only">Search stages</span><input type="search" placeholder="Search stages…" data-search-input autocomplete="off"></label>
+  </div>
+  <p class="result-count" data-count-out aria-live="polite"></p>
+  <div class="grid" id="stage-grid">
+    <article class="card" data-item data-search="stellar nebula birth molecular cloud"><div class="card-body"><span class="badge">Stage 1</span><h3>Nebula</h3><p>Cold gas and dust gather into dense regions that may collapse to form stars.</p></div></article>
+    <article class="card" data-item data-search="protostar gravity fusion"><div class="card-body"><span class="badge">Stage 2</span><h3>Protostar</h3><p>A forming star heats as gravity compresses its material. Fusion has not yet stabilized.</p></div></article>
+    <article class="card" data-item data-search="main sequence hydrogen fusion star"><div class="card-body"><span class="badge">Stage 3</span><h3>Main Sequence</h3><p>Hydrogen fusion in the core supplies energy that counteracts gravitational collapse.</p></div></article>
+    <article class="card" data-item data-search="red giant supergiant star evolution"><div class="card-body"><span class="badge">Stage 4</span><h3>Giant phase</h3><p>After core hydrogen is depleted, a star's structure changes. The details depend on its mass.</p></div></article>
+    <article class="card" data-item data-search="white dwarf planetary nebula low mass star"><div class="card-body"><span class="badge badge-warm">Possible ending</span><h3>White Dwarf</h3><p>Many low- and intermediate-mass stars leave behind a hot, dense stellar core.</p></div></article>
+    <article class="card" data-item data-search="supernova neutron star black hole massive star"><div class="card-body"><span class="badge badge-warm">Possible ending</span><h3>Supernova remnant</h3><p>Massive stars may explode as supernovae, leaving neutron stars or black holes.</p></div></article>
+  </div>
+  <p class="empty" data-empty hidden>No stages match your search.</p>
+</section>
+
+<section class="container section">
+  <div class="section-head reveal">
+    <p class="eyebrow">Interactive</p>
+    <h2>Colour, temperature and class</h2>
+    <p>Star colour is related to surface temperature: blue stars are generally hotter than red stars. Drag the slider to see how colour and spectral class change.</p>
+  </div>
+  <div class="startemp reveal">
+    <div class="star-view"><div class="star-orb" id="star-orb"></div></div>
+    <div>
+      <label for="temp">Surface temperature: <output id="temp-out" for="temp">5,800 K</output></label>
+      <input type="range" id="temp" min="0" max="100" step="0.5" value="31">
+      <div class="spectrum" aria-hidden="true"></div>
+      <div class="classes" id="classes" aria-label="Spectral classes from coolest (M) to hottest (O)"></div>
+      <p class="readout"><b id="sp-class">Class G</b> · example: <span id="sp-example">the Sun</span></p>
+      <p><button class="btn btn-ghost btn-sm" type="button" id="temp-sun">Set to the Sun (about 5,772 K)</button></p>
+    </div>
+  </div>
+  <div class="callout reveal">
+    <h3>Fast facts about stars</h3>
+    <p>• Star colour is related to surface temperature: blue stars are generally hotter than red stars.<br>• The Sun is about 4.6 billion years old.<br>• A star's mass is a major factor controlling its lifetime and final fate.<br>• The elements in planets and living organisms were forged through earlier generations of stars and stellar explosions.</p>
+  </div>
+</section>

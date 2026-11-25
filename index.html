@@ -1,0 +1,91 @@
+<!--meta {"title":"Home","description":"Cosmic Frontier is an astronomy learning hub: explore planets, stars, galaxies, real space missions and recent research.","scripts":["orrery"]} -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow">A window into the cosmos</p>
+      <h1>Explore the <span class="grad">Universe</span></h1>
+      <p class="lead">Discover stars, distant worlds, galaxies, black holes, and the missions expanding humanity's view of space.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/discover">Begin exploring</a>
+        <a class="btn btn-ghost" href="/assistant">Ask the Cosmic Assistant</a>
+      </div>
+      <p class="fact"><span class="fact-label">Cosmic fact</span><span data-fact-text>Sunlight takes about 8 minutes and 20 seconds to reach Earth.</span></p>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hv-orbit hv-orbit-2"></div><div class="hv-orbit"></div><div class="hv-planet"></div>
+    </div>
+  </div>
+</section>
+
+<section class="container section">
+  <div class="stats">
+    <div class="stat reveal"><b data-count="8">8</b><span>planets orbit our Sun</span></div>
+    <div class="stat reveal"><b data-count="299792">299,792</b><span>km/s — the speed of light</span></div>
+    <div class="stat reveal"><b data-count="4.6" data-dec="1">4.6</b><span>billion years: the age of the Sun</span></div>
+    <div class="stat reveal"><b data-count="9.46" data-dec="2">9.46</b><span>trillion km in one light-year</span></div>
+  </div>
+</section>
+
+<section class="container section" id="orrery">
+  <div class="section-head reveal">
+    <p class="eyebrow">Interactive</p>
+    <h2>Tour the Solar System</h2>
+    <p>Select a planet to learn more. Sizes and orbital speeds are simplified for display and are not to scale.</p>
+  </div>
+  <div class="orrery-layout reveal">
+    <div class="orrery-stage">
+      <svg class="orrery" id="orrery-svg" viewBox="0 0 600 600" role="group" aria-label="Animated diagram of the eight planets orbiting the Sun">
+        <defs>
+          <radialGradient id="sunGlow"><stop offset="0" stop-color="#fff6d6"/><stop offset=".4" stop-color="#ffc861" stop-opacity=".9"/><stop offset="1" stop-color="#ff8a3d" stop-opacity="0"/></radialGradient>
+        </defs>
+        <circle cx="300" cy="300" r="48" fill="url(#sunGlow)"/>
+        <circle class="sun" cx="300" cy="300" r="15"/>
+        <circle class="orbit-ring" cx="300" cy="300" r="55"/><circle class="orbit-ring" cx="300" cy="300" r="80"/>
+        <circle class="orbit-ring" cx="300" cy="300" r="105"/><circle class="orbit-ring" cx="300" cy="300" r="130"/>
+        <circle class="orbit-ring" cx="300" cy="300" r="170"/><circle class="orbit-ring" cx="300" cy="300" r="210"/>
+        <circle class="orbit-ring" cx="300" cy="300" r="245"/><circle class="orbit-ring" cx="300" cy="300" r="280"/>
+        <g class="mover m-mercury"><circle class="planet p-mercury" data-planet="mercury" cx="355" cy="300" r="3.2" tabindex="0" role="button" aria-label="Mercury"/></g>
+        <g class="mover m-venus"><circle class="planet p-venus" data-planet="venus" cx="380" cy="300" r="5" tabindex="0" role="button" aria-label="Venus"/></g>
+        <g class="mover m-earth"><circle class="planet p-earth" data-planet="earth" cx="405" cy="300" r="5.5" tabindex="0" role="button" aria-label="Earth"/></g>
+        <g class="mover m-mars"><circle class="planet p-mars" data-planet="mars" cx="430" cy="300" r="4" tabindex="0" role="button" aria-label="Mars"/></g>
+        <g class="mover m-jupiter"><circle class="planet p-jupiter" data-planet="jupiter" cx="470" cy="300" r="12" tabindex="0" role="button" aria-label="Jupiter"/></g>
+        <g class="mover m-saturn"><circle class="saturn-ring" cx="510" cy="300" r="17"/><circle class="planet p-saturn" data-planet="saturn" cx="510" cy="300" r="9.5" tabindex="0" role="button" aria-label="Saturn"/></g>
+        <g class="mover m-uranus"><circle class="planet p-uranus" data-planet="uranus" cx="545" cy="300" r="7.5" tabindex="0" role="button" aria-label="Uranus"/></g>
+        <g class="mover m-neptune"><circle class="planet p-neptune" data-planet="neptune" cx="580" cy="300" r="7.5" tabindex="0" role="button" aria-label="Neptune"/></g>
+      </svg>
+    </div>
+    <aside class="orrery-panel" aria-live="polite">
+      <div class="planet-list" role="group" aria-label="Choose a planet"></div>
+      <span class="badge" data-p-type>Rocky planet</span>
+      <h3 data-p-name>Earth</h3>
+      <dl class="facts">
+        <div><dt>Diameter</dt><dd data-p-diam>12,742 km</dd></div>
+        <div><dt>Distance from Sun</dt><dd data-p-dist>1.00 AU</dd></div>
+        <div><dt>Year length</dt><dd data-p-year>365.25 days</dd></div>
+      </dl>
+      <p data-p-fact>The only world known to host life, with liquid water covering about 71% of its surface.</p>
+      <button class="btn btn-ghost btn-sm" id="orrery-toggle" type="button" aria-pressed="false">Pause orbits</button>
+    </aside>
+  </div>
+</section>
+
+<section class="container section">
+  <div class="section-head reveal">
+    <h2>Welcome to Cosmic Frontier</h2>
+    <p>An astronomy learning hub. Explore the science behind the universe, follow real space missions, and read research updates from space agencies and observatories.</p>
+  </div>
+  <div class="grid">
+    <article class="card reveal"><div class="art art-galaxy"></div><div class="card-body"><span class="badge">Explore</span><h3>Discover Space</h3><p>Build your understanding of planets, galaxies, nebulae, and extreme objects.</p><a class="more" href="/discover">Explore topics →</a></div></article>
+    <article class="card reveal"><div class="art art-nebula"></div><div class="card-body"><span class="badge badge-warm">Stellar science</span><h3>Inside the Stars</h3><p>Learn how stars form, shine, evolve, and end their lives.</p><a class="more" href="/stars">Study stars →</a></div></article>
+    <article class="card reveal"><div class="art art-moon"></div><div class="card-body"><span class="badge badge-violet">Mission control</span><h3>Space Missions</h3><p>Track exploration projects and their scientific goals.</p><a class="more" href="/missions">View missions →</a></div></article>
+    <article class="card reveal"><div class="art art-scope"></div><div class="card-body"><span class="badge badge-green">New findings</span><h3>Research &amp; Discovery</h3><p>Read selected recent findings with links to original sources.</p><a class="more" href="/news">Read research →</a></div></article>
+  </div>
+</section>
+
+<section class="container section">
+  <div class="callout reveal">
+    <h3>Curiosity has no boundary</h3>
+    <p>From the nearest star to galaxies billions of light-years away, every observation adds another piece to the cosmic picture.</p>
+    <p><a class="btn btn-primary" href="/assistant">Ask the Cosmic Assistant</a></p>
+  </div>
+</section>
